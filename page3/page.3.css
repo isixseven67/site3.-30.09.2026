@@ -533,3 +533,350 @@ footer a{
     display: flex;
     justify-content: space-between;
 }
+
+/* Скрываем чекбокс */
+.burger-toggle {
+    display: none;
+}
+
+/* Бургер-иконка */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 1000;
+}
+
+.burger-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #B59571;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Мобильное меню */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #333333;
+    z-index: 999;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobile-menu ul {
+    list-style: none;
+
+}
+
+.mobile-menu ul li {
+    border-bottom: 1px solid #444;
+}
+
+.mobile-menu ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+    background-color: #444;
+}
+
+
+.burger-toggle:checked ~ .burger-menu .burger-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.burger-toggle:checked ~ .burger-menu .burger-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-toggle:checked ~ .burger-menu .burger-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.burger-toggle:checked ~ .mobile-menu {
+    left: 0;
+}
+
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .section_one {
+                width: 400px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .desktop-menu {
+        display: none;
+    }
+    
+    .burger-menu {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .sortirovka {
+        justify-content: flex-end;
+        position: relative;
+    }
+    .left_header{
+        width: 86px;
+    height: 571px;
+    background-color: #333333;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    }
+    .right_food{
+            width: 100%;
+    height: 1168px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    }
+    .right_food_container{
+            width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .mini_menu{
+        width: 400px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+
+    .mini_menu_container{
+            width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    }
+
+    .sec4{
+            width: 100%;
+    height: 1580px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .sec4_container{
+        width: 80%;
+    height: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer{
+    width: 400px;
+    height: 100px;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_container{
+        width: 100%;
+    height: 81%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_left{
+        width: 85px;
+}
+.footer_center{
+        width: 124px;
+    font-size: 7px;
+}
+.footer_left_mir{
+        width: 169px;
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+}
+
+.footer_right{
+        width: 120px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.btn_primary{
+            width: 80px;
+    height: 25px;
+    background-color: #B59571;
+    color: #fff;
+    border: none;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20px;
+    }
+
+    .btn_outline{
+        width: 80px;
+    height: 25px;
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #ccc;
+    font-size: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .map_overlay{
+        width: 100%;
+    height: 320px;
+    background-color: #4a4a4a;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    }
+
+    .time_number{
+               width: 175px;
+        height: 80px;
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+
+    .time_number .num{
+        font-size: 15px;
+    font-weight: 700;
+    color: #B59571;
+    width: 89px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    }
+
+    .time_number .unit{
+        font-size: 10px;
+    font-weight: 700;
+    color: #B59571;
+    width: 50px;
+    height: 151px;
+    display: flex;
+    align-items: center;
+    }
+
+    .time_label{
+    font-size: 7px;
+        color: #555;
+        width: 374px;
+        height: 40px;
+        display: flex;
+        position: relative;
+        left: 16px;
+    }
+
+    .work_schedule{
+            width: 400px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    }
+
+    .work_title{
+        width: 61%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    top: 10px;
+    }
+
+    .overlay_buttons{
+            justify-content: center;
+        width: 111%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 20px;
+    }
+
+    .overlay_buttons .btn_primary{
+        width: 80px;
+    height: 23px;
+    font-size: 9px;
+    position: relative;
+    right: 15px;
+    }
+
+    .btn_outline_light{
+        width: 83px;
+    height: 23px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 9px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .sec4_container{
+                width: 80%;
+        height: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
